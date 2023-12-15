@@ -6,9 +6,9 @@
 	<title>DeskApp - Bootstrap Admin Dashboard HTML Template</title>
 
 	<!-- Site favicon -->
-	<link rel="apple-touch-icon" sizes="180x180" href="vendors/images/apple-touch-icon.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="vendors/images/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="vendors/images/favicon-16x16.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="./vendors/images/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="./vendors/images/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="./vendors/images/favicon-16x16.png">
 
 	<!-- Mobile Specific Metas -->
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -16,9 +16,9 @@
 	<!-- Google Font -->
 	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 	<!-- CSS -->
-	<link rel="stylesheet" type="text/css" href="vendors/styles/core.css">
-	<link rel="stylesheet" type="text/css" href="vendors/styles/icon-font.min.css">
-	<link rel="stylesheet" type="text/css" href="vendors/styles/style.css">
+	<link rel="stylesheet" type="text/css" href="./vendors/styles/core.css">
+	<link rel="stylesheet" type="text/css" href="./vendors/styles/icon-font.min.css">
+	<link rel="stylesheet" type="text/css" href="./vendors/styles/style.css">
 
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-119386393-1"></script>
@@ -33,7 +33,7 @@
 <body>
 	<div class="pre-loader">
 		<div class="pre-loader-box">
-			<div class="loader-logo"><img src="vendors/images/deskapp-logo.svg" alt=""></div>
+			<div class="loader-logo"><img src="./vendors/images/deskapp-logo.svg" alt=""></div>
 			<div class='loader-progress' id="progress_div">
 				<div class='bar' id='bar1'></div>
 			</div>
@@ -104,42 +104,42 @@
 							<ul>
 								<li>
 									<a href="#">
-										<img src="vendors/images/img.jpg" alt="">
+										<img src="./vendors/images/img.jpg" alt="">
 										<h3>John Doe</h3>
 										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed...</p>
 									</a>
 								</li>
 								<li>
 									<a href="#">
-										<img src="vendors/images/photo1.jpg" alt="">
+										<img src="./vendors/images/photo1.jpg" alt="">
 										<h3>Lea R. Frith</h3>
 										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed...</p>
 									</a>
 								</li>
 								<li>
 									<a href="#">
-										<img src="vendors/images/photo2.jpg" alt="">
+										<img src="./vendors/images/photo2.jpg" alt="">
 										<h3>Erik L. Richards</h3>
 										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed...</p>
 									</a>
 								</li>
 								<li>
 									<a href="#">
-										<img src="vendors/images/photo3.jpg" alt="">
+										<img src="./vendors/images/photo3.jpg" alt="">
 										<h3>John Doe</h3>
 										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed...</p>
 									</a>
 								</li>
 								<li>
 									<a href="#">
-										<img src="vendors/images/photo4.jpg" alt="">
+										<img src="./vendors/images/photo4.jpg" alt="">
 										<h3>Renee I. Hansen</h3>
 										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed...</p>
 									</a>
 								</li>
 								<li>
 									<a href="#">
-										<img src="vendors/images/img.jpg" alt="">
+										<img src="./vendors/images/img.jpg" alt="">
 										<h3>Vicki M. Coleman</h3>
 										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed...</p>
 									</a>
@@ -153,20 +153,20 @@
 				<div class="dropdown">
 					<a class="dropdown-toggle" href="#" role="button" data-toggle="dropdown">
 						<span class="user-icon">
-							<img src="vendors/images/photo1.jpg" alt="">
+							<img src="./vendors/images/photo1.jpg" alt="">
 						</span>
 						<span class="user-name">Ross C. Lopez</span>
 					</a>
 					<div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
-						<a class="dropdown-item" href="profile.html"><i class="dw dw-user1"></i> Profile</a>
-						<a class="dropdown-item" href="profile.html"><i class="dw dw-settings2"></i> Setting</a>
-						<a class="dropdown-item" href="faq.html"><i class="dw dw-help"></i> Help</a>
-						<a class="dropdown-item" href="login.html"><i class="dw dw-logout"></i> Log Out</a>
+						<a class="dropdown-item" href="profile.php"><i class="dw dw-user1"></i> Profile</a>
+						<a class="dropdown-item" href="profile.php"><i class="dw dw-settings2"></i> Setting</a>
+						<a class="dropdown-item" href="faq.php"><i class="dw dw-help"></i> Help</a>
+						<a class="dropdown-item" href="login.php"><i class="dw dw-logout"></i> Log Out</a>
 					</div>
 				</div>
 			</div>
 			<div class="github-link">
-				<a href="https://github.com/dropways/deskapp" target="_blank"><img src="vendors/images/github.svg" alt=""></a>
+				<a href="https://github.com/dropways/deskapp" target="_blank"><img src="./vendors/images/github.svg" alt=""></a>
 			</div>
 		</div>
 	</div>
@@ -248,9 +248,9 @@
 
 	<div class="left-side-bar">
 		<div class="brand-logo">
-			<a href="index.html">
-				<img src="vendors/images/deskapp-logo.svg" alt="" class="dark-logo">
-				<img src="vendors/images/deskapp-logo-white.svg" alt="" class="light-logo">
+			<a href="index.php">
+				<img src="./vendors/images/deskapp-logo.svg" alt="" class="dark-logo">
+				<img src="./vendors/images/deskapp-logo-white.svg" alt="" class="light-logo">
 			</a>
 			<div class="close-sidebar" data-toggle="left-sidebar-close">
 				<i class="ion-close-round"></i>
@@ -264,8 +264,8 @@
 							<span class="micon dw dw-house-1"></span><span class="mtext">Home</span>
 						</a>
 						<ul class="submenu">
-							<li><a href="index.html">Dashboard style 1</a></li>
-							<li><a href="index2.html">Dashboard style 2</a></li>
+							<li><a href="index.php">Dashboard style 1</a></li>
+							<li><a href="index2.php">Dashboard style 2</a></li>
 						</ul>
 					</li>
 					<li class="dropdown">
@@ -273,13 +273,13 @@
 							<span class="micon dw dw-edit2"></span><span class="mtext">Forms</span>
 						</a>
 						<ul class="submenu">
-							<li><a href="form-basic.html">Form Basic</a></li>
-							<li><a href="advanced-components.html">Advanced Components</a></li>
-							<li><a href="form-wizard.html">Form Wizard</a></li>
-							<li><a href="html5-editor.html">HTML5 Editor</a></li>
-							<li><a href="form-pickers.html">Form Pickers</a></li>
-							<li><a href="image-cropper.html">Image Cropper</a></li>
-							<li><a href="image-dropzone.html">Image Dropzone</a></li>
+							<li><a href="form-basic.php">Form Basic</a></li>
+							<li><a href="advanced-components.php">Advanced Components</a></li>
+							<li><a href="form-wizard.php">Form Wizard</a></li>
+							<li><a href="html5-editor.php">HTML5 Editor</a></li>
+							<li><a href="form-pickers.php">Form Pickers</a></li>
+							<li><a href="image-cropper.php">Image Cropper</a></li>
+							<li><a href="image-dropzone.php">Image Dropzone</a></li>
 						</ul>
 					</li>
 					<li class="dropdown">
@@ -287,12 +287,12 @@
 							<span class="micon dw dw-library"></span><span class="mtext">Tables</span>
 						</a>
 						<ul class="submenu">
-							<li><a href="basic-table.html">Basic Tables</a></li>
-							<li><a href="datatable.html">DataTables</a></li>
+							<li><a href="basic-table.php">Basic Tables</a></li>
+							<li><a href="datatable.php">DataTables</a></li>
 						</ul>
 					</li>
 					<li>
-						<a href="calendar.html" class="dropdown-toggle no-arrow">
+						<a href="calendar.php" class="dropdown-toggle no-arrow">
 							<span class="micon dw dw-calendar1"></span><span class="mtext">Calendar</span>
 						</a>
 					</li>
@@ -301,20 +301,20 @@
 							<span class="micon dw dw-apartment"></span><span class="mtext"> UI Elements </span>
 						</a>
 						<ul class="submenu">
-							<li><a href="ui-buttons.html">Buttons</a></li>
-							<li><a href="ui-cards.html">Cards</a></li>
-							<li><a href="ui-cards-hover.html">Cards Hover</a></li>
-							<li><a href="ui-modals.html">Modals</a></li>
-							<li><a href="ui-tabs.html">Tabs</a></li>
-							<li><a href="ui-tooltip-popover.html">Tooltip &amp; Popover</a></li>
-							<li><a href="ui-sweet-alert.html">Sweet Alert</a></li>
-							<li><a href="ui-notification.html">Notification</a></li>
-							<li><a href="ui-timeline.html">Timeline</a></li>
-							<li><a href="ui-progressbar.html">Progressbar</a></li>
-							<li><a href="ui-typography.html">Typography</a></li>
-							<li><a href="ui-list-group.html">List group</a></li>
-							<li><a href="ui-range-slider.html">Range slider</a></li>
-							<li><a href="ui-carousel.html">Carousel</a></li>
+							<li><a href="ui-buttons.php">Buttons</a></li>
+							<li><a href="ui-cards.php">Cards</a></li>
+							<li><a href="ui-cards-hover.php">Cards Hover</a></li>
+							<li><a href="ui-modals.php">Modals</a></li>
+							<li><a href="ui-tabs.php">Tabs</a></li>
+							<li><a href="ui-tooltip-popover.php">Tooltip &amp; Popover</a></li>
+							<li><a href="ui-sweet-alert.php">Sweet Alert</a></li>
+							<li><a href="ui-notification.php">Notification</a></li>
+							<li><a href="ui-timeline.php">Timeline</a></li>
+							<li><a href="ui-progressbar.php">Progressbar</a></li>
+							<li><a href="ui-typography.php">Typography</a></li>
+							<li><a href="ui-list-group.php">List group</a></li>
+							<li><a href="ui-range-slider.php">Range slider</a></li>
+							<li><a href="ui-carousel.php">Carousel</a></li>
 						</ul>
 					</li>
 					<li class="dropdown">
@@ -322,11 +322,11 @@
 							<span class="micon dw dw-paint-brush"></span><span class="mtext">Icons</span>
 						</a>
 						<ul class="submenu">
-							<li><a href="font-awesome.html">FontAwesome Icons</a></li>
-							<li><a href="foundation.html">Foundation Icons</a></li>
-							<li><a href="ionicons.html">Ionicons Icons</a></li>
-							<li><a href="themify.html">Themify Icons</a></li>
-							<li><a href="custom-icon.html">Custom Icons</a></li>
+							<li><a href="font-awesome.php">FontAwesome Icons</a></li>
+							<li><a href="foundation.php">Foundation Icons</a></li>
+							<li><a href="ionicons.php">Ionicons Icons</a></li>
+							<li><a href="themify.php">Themify Icons</a></li>
+							<li><a href="custom-icon.php">Custom Icons</a></li>
 						</ul>
 					</li>
 					<li class="dropdown">
@@ -334,10 +334,10 @@
 							<span class="micon dw dw-analytics-21"></span><span class="mtext">Charts</span>
 						</a>
 						<ul class="submenu">
-							<li><a href="highchart.html">Highchart</a></li>
-							<li><a href="knob-chart.html">jQuery Knob</a></li>
-							<li><a href="jvectormap.html">jvectormap</a></li>
-							<li><a href="apexcharts.html">Apexcharts</a></li>
+							<li><a href="highchart.php">Highchart</a></li>
+							<li><a href="knob-chart.php">jQuery Knob</a></li>
+							<li><a href="jvectormap.php">jvectormap</a></li>
+							<li><a href="apexcharts.php">Apexcharts</a></li>
 						</ul>
 					</li>
 					<li class="dropdown">
@@ -345,10 +345,10 @@
 							<span class="micon dw dw-right-arrow1"></span><span class="mtext">Additional Pages</span>
 						</a>
 						<ul class="submenu">
-							<li><a href="video-player.html">Video Player</a></li>
-							<li><a href="login.html">Login</a></li>
-							<li><a href="forgot-password.html">Forgot Password</a></li>
-							<li><a href="reset-password.html">Reset Password</a></li>
+							<li><a href="./video-player.php">Video Player</a></li>
+							<li><a href="login.php">Login</a></li>
+							<li><a href="forgot-password.php">Forgot Password</a></li>
+							<li><a href="reset-password.php">Reset Password</a></li>
 						</ul>
 					</li>
 					<li class="dropdown">
@@ -356,11 +356,11 @@
 							<span class="micon dw dw-browser2"></span><span class="mtext">Error Pages</span>
 						</a>
 						<ul class="submenu">
-							<li><a href="400.html">400</a></li>
-							<li><a href="403.html">403</a></li>
-							<li><a href="404.html">404</a></li>
-							<li><a href="500.html">500</a></li>
-							<li><a href="503.html">503</a></li>
+							<li><a href="400.php">400</a></li>
+							<li><a href="403.php">403</a></li>
+							<li><a href="404.php">404</a></li>
+							<li><a href="500.php">500</a></li>
+							<li><a href="503.php">503</a></li>
 						</ul>
 					</li>
 
@@ -369,16 +369,16 @@
 							<span class="micon dw dw-copy"></span><span class="mtext">Extra Pages</span>
 						</a>
 						<ul class="submenu">
-							<li><a href="blank.html">Blank</a></li>
-							<li><a href="contact-directory.html">Contact Directory</a></li>
-							<li><a href="blog.html">Blog</a></li>
-							<li><a href="blog-detail.html">Blog Detail</a></li>
-							<li><a href="product.html">Product</a></li>
-							<li><a href="product-detail.html">Product Detail</a></li>
-							<li><a href="faq.html">FAQ</a></li>
-							<li><a href="profile.html">Profile</a></li>
-							<li><a href="gallery.html">Gallery</a></li>
-							<li><a href="pricing-table.html">Pricing Tables</a></li>
+							<li><a href="blank.php">Blank</a></li>
+							<li><a href="contact-directory.php">Contact Directory</a></li>
+							<li><a href="blog.php">Blog</a></li>
+							<li><a href="blog-detail.php">Blog Detail</a></li>
+							<li><a href="product.php">Product</a></li>
+							<li><a href="product-detail.php">Product Detail</a></li>
+							<li><a href="faq.php">FAQ</a></li>
+							<li><a href="profile.php">Profile</a></li>
+							<li><a href="gallery.php">Gallery</a></li>
+							<li><a href="pricing-table.php">Pricing Tables</a></li>
 						</ul>
 					</li>
 					<li class="dropdown">
@@ -404,17 +404,17 @@
 						</ul>
 					</li>
 					<li>
-						<a href="sitemap.html" class="dropdown-toggle no-arrow">
+						<a href="./sitemap.php" class="dropdown-toggle no-arrow">
 							<span class="micon dw dw-diagram"></span><span class="mtext">Sitemap</span>
 						</a>
 					</li>
 					<li>
-						<a href="chat.html" class="dropdown-toggle no-arrow">
+						<a href="chat.php" class="dropdown-toggle no-arrow">
 							<span class="micon dw dw-chat3"></span><span class="mtext">Chat</span>
 						</a>
 					</li>
 					<li>
-						<a href="invoice.html" class="dropdown-toggle no-arrow">
+						<a href="invoice.php" class="dropdown-toggle no-arrow">
 							<span class="micon dw dw-invoice"></span><span class="mtext">Invoice</span>
 						</a>
 					</li>
@@ -429,16 +429,16 @@
 							<span class="micon dw dw-edit-2"></span><span class="mtext">Documentation</span>
 						</a>
 						<ul class="submenu">
-							<li><a href="introduction.html">Introduction</a></li>
-							<li><a href="getting-started.html">Getting Started</a></li>
-							<li><a href="color-settings.html">Color Settings</a></li>
-							<li><a href="third-party-plugins.html">Third Party Plugins</a></li>
+							<li><a href="introduction.php">Introduction</a></li>
+							<li><a href="getting-started.php">Getting Started</a></li>
+							<li><a href="color-settings.php">Color Settings</a></li>
+							<li><a href="third-party-plugins.php">Third Party Plugins</a></li>
 						</ul>
 					</li>
 					<li>
 						<a href="https://dropways.github.io/deskapp-free-single-page-website-template/" target="_blank" class="dropdown-toggle no-arrow">
 							<span class="micon dw dw-paper-plane1"></span>
-							<span class="mtext">Landing Page <img src="vendors/images/coming-soon.png" alt="" width="25"></span>
+							<span class="mtext">Landing Page <img src="./vendors/images/coming-soon.png" alt="" width="25"></span>
 						</a>
 					</li>
 				</ul>
@@ -458,7 +458,7 @@
 							</div>
 							<nav aria-label="breadcrumb" role="navigation">
 								<ol class="breadcrumb">
-									<li class="breadcrumb-item"><a href="index.html">Home</a></li>
+									<li class="breadcrumb-item"><a href="index.php">Home</a></li>
 									<li class="breadcrumb-item active" aria-current="page">Icons</li>
 								</ol>
 							</nav>
@@ -7395,9 +7395,9 @@
 		</div>
 	</div>
 	<!-- js -->
-	<script src="vendors/scripts/core.js"></script>
-	<script src="vendors/scripts/script.min.js"></script>
-	<script src="vendors/scripts/process.js"></script>
-	<script src="vendors/scripts/layout-settings.js"></script>
+	<script src="./vendors/scripts/core.js"></script>
+	<script src="./vendors/scripts/script.min.js"></script>
+	<script src="./vendors/scripts/process.js"></script>
+	<script src="./vendors/scripts/layout-settings.js"></script>
 </body>
 </html>

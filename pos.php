@@ -18,7 +18,6 @@
 	<!-- CSS -->
 	<link rel="stylesheet" type="text/css" href="./vendors/styles/core.css">
 	<link rel="stylesheet" type="text/css" href="./vendors/styles/icon-font.min.css">
-	<link rel="stylesheet" type="text/css" href="./src/plugins/jvectormap/jquery-jvectormap-2.0.3.css">
 	<link rel="stylesheet" type="text/css" href="./vendors/styles/style.css">
 
 	<!-- Global site tag (gtag.js) - Google Analytics -->
@@ -44,8 +43,7 @@
 			</div>
 		</div>
 	</div>
-
-	<?php include("./header.php"); ?>
+<?php include("./header.php"); ?>
 
 	<div class="right-sidebar">
 		<div class="sidebar-title">
@@ -121,91 +119,122 @@
 			</div>
 		</div>
 	</div>
-
-	<?php include("./sidebar.php"); ?>
+<?php include("./sidebar.php"); ?>
 	<div class="mobile-menu-overlay"></div>
 
 	<div class="main-container">
-		<div class="xs-pd-20-10 pd-ltr-20">
-			<div class="page-header">
-				<div class="row">
-					<div class="col-md-6 col-sm-12">
-						<div class="title">
-							<h4>Dashboard</h4>
+		<div class="pd-ltr-20 xs-pd-20-10">
+			<div class="min-height-200px">
+				<div class="page-header">
+					<div class="row">
+						<div class="col-md-12 col-sm-12">
+							<div class="title">
+								<h4>Point of Sales</h4>
+							</div>
+							<nav aria-label="breadcrumb" role="navigation">
+								<ol class="breadcrumb">
+									<li class="breadcrumb-item"><a href="index.php">Home</a></li>
+									<li class="breadcrumb-item active" aria-current="page">Point Of Sale</li>
+								</ol>
+							</nav>
+							
 						</div>
-						<nav aria-label="breadcrumb" role="navigation">
-							<ol class="breadcrumb">
-								<li class="breadcrumb-item"><a href="index.php">Home</a></li>
-								<li class="breadcrumb-item active" aria-current="page">Dashboard</li>
-							</ol>
-						</nav>
-					</div>
-					<div class="col-md-6 col-sm-12 text-right">
+						<div class="col-md-6 col-sm-12 text-right">
 						<div class="dropdown">
 							<a class="btn btn-primary dropdown-toggle" href="#" role="button" data-toggle="dropdown">
-								As of December 2023
+								View POS Cart
 							</a>
-							<div class="dropdown-menu dropdown-menu-right">
-								<a class="dropdown-item" href="#">Export List</a>
-								<a class="dropdown-item" href="#">Policies</a>
-								<a class="dropdown-item" href="#">View Assets</a>
+						
+						</div>
+					</div>
+					</div>
+					
+				</div>
+				
+				<div class="row clearfix">
+					<div class="col-lg-3 col-md-6 col-sm-12 mb-30">
+						<div class="da-card">
+							<div class="da-card-photo">
+								<img src="./src/images/gatoradered.jpg" alt="">
+								<div class="da-overlay da-slide-left">
+									<div class="da-social">
+										<ul class="clearfix">
+											<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+											<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+											<li><a href="#"><i class="fa fa-envelope-o"></i></a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="da-card-content">
+								<h5 class="h5 mb-10">Gatorade Red</h5>
+								<p class="mb-0">PHP 35.54</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-6 col-sm-12 mb-30">
+						<div class="da-card">
+							<div class="da-card-photo">
+								<img src="./src/images/gatoradeblue.jpg" alt="">
+								<div class="da-overlay da-slide-left">
+									<div class="da-social">
+										<ul class="clearfix">
+											<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+											<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+											<li><a href="#"><i class="fa fa-envelope-o"></i></a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="da-card-content">
+								<h5 class="h5 mb-10">Gatorade Blue</h5>
+								<p class="mb-0">PHP 35.54</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-6 col-sm-12 mb-30">
+						<div class="da-card">
+							<div class="da-card-photo">
+								<img src="./src/images/gatoradeviolet.png" alt="">
+								<div class="da-overlay da-slide-left">
+									<div class="da-social">
+										<ul class="clearfix">
+											<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+											<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+											<li><a href="#"><i class="fa fa-envelope-o"></i></a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="da-card-content">
+								<h5 class="h5 mb-10">Gatorade Violet</h5>
+								<p class="mb-0">PHP 35.54</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-6 col-sm-12 mb-30">
+						<div class="da-card">
+							<div class="da-card-photo">
+								<img src="./src/images/gatoradewhite.jpg" alt="">
+								<div class="da-overlay da-slide-left">
+									<div class="da-social">
+										<ul class="clearfix">
+											<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+											<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+											<li><a href="#"><i class="fa fa-envelope-o"></i></a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="da-card-content">
+								<h5 class="h5 mb-10">Gatorade White</h5>
+								<p class="mb-0">PHP 35.54</p>
 							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-			<div class="row clearfix progress-box">
-				<div class="col-lg-3 col-md-6 col-sm-12 mb-30">
-					<div class="card-box pd-30 height-100-p">
-						<div class="progress-box text-center">
-							 <input type="text" class="knob dial1" value="80" data-width="120" data-height="120" data-linecap="round" data-thickness="0.12" data-bgColor="#fff" data-fgColor="#1b00ff" data-angleOffset="180" readonly>
-							<h5 class="text-blue padding-top-10 h5">Total Earnings</h5>
-							<span class="d-block">80% Average <i class="fa fa-line-chart text-blue"></i></span>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-3 col-md-6 col-sm-12 mb-30">
-					<div class="card-box pd-30 height-100-p">
-						<div class="progress-box text-center">
-							 <input type="text" class="knob dial2" value="70" data-width="120" data-height="120" data-linecap="round" data-thickness="0.12" data-bgColor="#fff" data-fgColor="#00e091" data-angleOffset="180" readonly>
-							<h5 class="text-light-green padding-top-10 h5">Total Sold</h5>
-							<span class="d-block">75% Average <i class="fa text-light-green fa-line-chart"></i></span>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-3 col-md-6 col-sm-12 mb-30">
-					<div class="card-box pd-30 height-100-p">
-						<div class="progress-box text-center">
-							 <input type="text" class="knob dial3" value="90" data-width="120" data-height="120" data-linecap="round" data-thickness="0.12" data-bgColor="#fff" data-fgColor="#f56767" data-angleOffset="180" readonly>
-							<h5 class="text-light-orange padding-top-10 h5">Sales Status</h5>
-							<span class="d-block">90% Average <i class="fa text-light-orange fa-line-chart"></i></span>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-3 col-md-6 col-sm-12 mb-30">
-					<div class="card-box pd-30 height-100-p">
-						<div class="progress-box text-center">
-							 <input type="text" class="knob dial4" value="65" data-width="120" data-height="120" data-linecap="round" data-thickness="0.12" data-bgColor="#fff" data-fgColor="#a683eb" data-angleOffset="180" readonly>
-							<h5 class="text-light-purple padding-top-10 h5">Panding Orders</h5>
-							<span class="d-block">65% Average <i class="fa text-light-purple fa-line-chart"></i></span>
-						</div>
-					</div>
-				</div>
-			</div>
-			
-			<div class="row">
-				<div class="col-lg-7 col-md-12 col-sm-12 mb-30">
-					<div class="card-box pd-30 height-100-p">
-						<h4 class="mb-30 h4">Monthly Records</h4>
-						<div id="compliance-trend" class="compliance-trend"></div>
-					</div>
-				</div>
-				<div class="col-lg-5 col-md-12 col-sm-12 mb-30">
-					<div class="card-box pd-30 height-100-p">
-						<h4 class="mb-30 h4">POS Statistics</h4>
-						<div id="chart" class="chart"></div>
-					</div>
-				</div>
+
+
 			</div>
 			<?php include("./footer.php"); ?>
 		</div>
@@ -215,11 +244,5 @@
 	<script src="./vendors/scripts/script.min.js"></script>
 	<script src="./vendors/scripts/process.js"></script>
 	<script src="./vendors/scripts/layout-settings.js"></script>
-	<script src="src/plugins/jQuery-Knob-master/jquery.knob.min.js"></script>
-	<script src="src/plugins/highcharts-6.0.7/code/highcharts.js"></script>
-	<script src="src/plugins/highcharts-6.0.7/code/highcharts-more.js"></script>
-	<script src="src/plugins/jvectormap/jquery-jvectormap-2.0.3.min.js"></script>
-	<script src="src/plugins/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
-	<script src="./vendors/scripts/dashboard2.js"></script>
 </body>
 </html>

@@ -1,7 +1,7 @@
 <div class="left-side-bar">
 		<div class="brand-logo">
 			<a href="index.php">
-            <img src="vendors/images/deskapp-logo.svg" alt="" class="dark-logo">
+<img src="vendors/images/deskapp-logo.svg" alt="" class="dark-logo">
 				<img src="./src/images/LOGO.png" alt="" class="light-logo">
 			</a>
 			<div class="close-sidebar" data-toggle="left-sidebar-close">
@@ -44,3 +44,95 @@
 			</div>
 		</div>
 	</div>
+
+	<?php 
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "pos_inventory";
+
+$conn = new mysqli($servername, $username, $password, $dbname);
+if ($conn->connect_error) {
+  die("Connection failed: " . $conn->connect_error);
+}
+
+function stable_items($conn){
+$sql = "SELECT * FROM `item_view` where itemStock > 50";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+  // output data of each row
+  while($row = $result->fetch_assoc()) {
+    echo '<tr>	<td>'.$row["itemID"].'</td><td scope="row">'.$row["itemStock"].'</td><td scope="row">'.$row["itemPrice"].'</td><td scope="row">'.$row["itemName"].'</td><td scope="row">'.$row["itemDescription"].'</td><td scope="row">'.$row["itemBrand"].'</td><td scope="row">'.$row["itemCategory"].'</td><td><a href="http://" style="background-color: darkblue; color: #ffffff; padding: 7px; border-radius: 5px;">Edit</a></td></tr>';
+  }
+} else {
+  echo "0 results";
+}
+}
+
+
+function unstable_items($conn){
+$sql = "SELECT * FROM `item_view` where itemStock < 50";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+  // output data of each row
+  while($row = $result->fetch_assoc()) {
+    echo '<tr>	<td>'.$row["itemID"].'</td><td scope="row">'.$row["itemStock"].'</td><td scope="row">'.$row["itemPrice"].'</td><td scope="row">'.$row["itemName"].'</td><td scope="row">'.$row["itemDescription"].'</td><td scope="row">'.$row["itemBrand"].'</td><td scope="row">'.$row["itemCategory"].'</td><td><a href="http://" style="background-color: darkblue; color: #ffffff; padding: 7px; border-radius: 5px;">Edit</a></td></tr>';
+  }
+} else {
+  echo "0 results";
+}
+}
+
+function pos_items($conn){
+$sql = "SELECT * FROM `item_view` where itemStock > 1";
+$result = $conn->query($sql);
+if ($result->num_rows > 0) {
+  // output data of each row
+  while($row = $result->fetch_assoc()) {
+    echo '<div class="col-lg-3 col-md-6 col-sm-12 mb-30" style="cursor: pointer;">
+						<div class="da-card">
+							<div class="da-card-photo">
+								<img src="data:image/png;base64,'.base64_encode($row["itemImage"]).'" alt="" style="height: 250px;display: block; margin-left: auto; margin-right: auto;">
+								<div class="da-overlay da-slide-left">
+									<div class="da-social">
+										<ul class="clearfix">
+											<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+											<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+											<li><a href="#"><i class="fa fa-envelope-o"></i></a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="da-card-content">
+								<h5 class="h5 mb-10">'.$row["itemName"].'</h5>
+								<p class="mb-0">'.$row["itemPrice"].'</p>
+							</div>
+						</div>
+					</div>
+				';
+			}
+} else {
+  echo "0 results";
+}
+}
+
+
+
+
+function receipts($conn){
+$sql = "SELECT * FROM `receipts`";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+  // output data of each row
+  while($row = $result->fetch_assoc()) {
+    echo '<tr>	<td>'.$row["itemID"].'</td><td scope="row">'.$row["itemStock"].'</td><td scope="row">'.$row["itemPrice"].'</td><td scope="row">'.$row["itemName"].'</td><td scope="row">'.$row["itemDescription"].'</td><td scope="row">'.$row["itemBrand"].'</td><td scope="row">'.$row["itemCategory"].'</td><td><a href="http://" style="background-color: darkblue; color: #ffffff; padding: 7px; border-radius: 5px;">Edit</a></td></tr>';
+  }
+} else {
+  echo "0 results";
+}
+}
+
+?>

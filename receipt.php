@@ -162,8 +162,8 @@
 						<table class="table hover multiple-select-row data-table-export nowrap">
 							<thead>
 								<tr>
-									<th class="table-plus datatable-nosort">Item</th>
-									<th>Quantity</th>
+									<th class="table-plus datatable-nosort">OrderID</th>
+								
 									<th>Total Price</th>
 									<th>Date</th>
 								</tr>

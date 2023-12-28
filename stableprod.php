@@ -162,23 +162,18 @@
 						<table class="table hover multiple-select-row data-table-export nowrap">
 							<thead>
 								<tr>
-									<th class="table-plus datatable-nosort">Name</th>
+									<th class="table-plus datatable-nosort">ID</th>
+									<th>Stock</th>
+									<th>Price</th>
+									<th>Name</th>
 									<th>Description</th>
 									<th>Brand</th>
 									<th>Category</th>
-									<th>Price</th>
-									<th>Stock</th>
+									<th>Action</th>
 								</tr>
 							</thead>
 							<tbody>
-								<tr>
-									<td class="table-plus">Gatorade Blue</td>
-									<td>Drinks based on electrolyte</td>
-									<td>Gatorade</td>
-									<td>Drinks</td>
-									<td>35.32</td>
-									<td>5</td>
-								</tr>
+								<?php  stable_items($conn); ?>
 								
 							</tbody>
 						</table>

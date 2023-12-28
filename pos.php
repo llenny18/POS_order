@@ -152,86 +152,8 @@
 				</div>
 				
 				<div class="row clearfix">
-					<div class="col-lg-3 col-md-6 col-sm-12 mb-30">
-						<div class="da-card">
-							<div class="da-card-photo">
-								<img src="./src/images/gatoradered.jpg" alt="">
-								<div class="da-overlay da-slide-left">
-									<div class="da-social">
-										<ul class="clearfix">
-											<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-											<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-											<li><a href="#"><i class="fa fa-envelope-o"></i></a></li>
-										</ul>
-									</div>
-								</div>
-							</div>
-							<div class="da-card-content">
-								<h5 class="h5 mb-10">Gatorade Red</h5>
-								<p class="mb-0">PHP 35.54</p>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-3 col-md-6 col-sm-12 mb-30">
-						<div class="da-card">
-							<div class="da-card-photo">
-								<img src="./src/images/gatoradeblue.jpg" alt="">
-								<div class="da-overlay da-slide-left">
-									<div class="da-social">
-										<ul class="clearfix">
-											<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-											<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-											<li><a href="#"><i class="fa fa-envelope-o"></i></a></li>
-										</ul>
-									</div>
-								</div>
-							</div>
-							<div class="da-card-content">
-								<h5 class="h5 mb-10">Gatorade Blue</h5>
-								<p class="mb-0">PHP 35.54</p>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-3 col-md-6 col-sm-12 mb-30">
-						<div class="da-card">
-							<div class="da-card-photo">
-								<img src="./src/images/gatoradeviolet.png" alt="">
-								<div class="da-overlay da-slide-left">
-									<div class="da-social">
-										<ul class="clearfix">
-											<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-											<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-											<li><a href="#"><i class="fa fa-envelope-o"></i></a></li>
-										</ul>
-									</div>
-								</div>
-							</div>
-							<div class="da-card-content">
-								<h5 class="h5 mb-10">Gatorade Violet</h5>
-								<p class="mb-0">PHP 35.54</p>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-3 col-md-6 col-sm-12 mb-30">
-						<div class="da-card">
-							<div class="da-card-photo">
-								<img src="./src/images/gatoradewhite.jpg" alt="">
-								<div class="da-overlay da-slide-left">
-									<div class="da-social">
-										<ul class="clearfix">
-											<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-											<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-											<li><a href="#"><i class="fa fa-envelope-o"></i></a></li>
-										</ul>
-									</div>
-								</div>
-							</div>
-							<div class="da-card-content">
-								<h5 class="h5 mb-10">Gatorade White</h5>
-								<p class="mb-0">PHP 35.54</p>
-							</div>
-						</div>
-					</div>
+					<?php pos_items($conn); ?>
+					
 				</div>
 
 

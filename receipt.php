@@ -3,7 +3,7 @@
 <head>
 	<!-- Basic Page Info -->
 	<meta charset="utf-8">
-	<title>DeskApp - Bootstrap Admin Dashboard HTML Template</title>
+	<title>POS_IMS - Receipts</title>
 
 	<!-- Site favicon -->
 	<link rel="apple-touch-icon" sizes="180x180" href="./vendors/images/apple-touch-icon.png">
@@ -166,16 +166,11 @@
 								
 									<th>Total Price</th>
 									<th>Date</th>
+									<th>Action</th>
 								</tr>
 							</thead>
 							<tbody>
-								<tr>
-									<td class="table-plus">Gatorade Blue</td>
-									<td>5</td>
-									<td>PHP 152.7</td>
-									<td>December 12 2023</td>
-									
-								</tr>
+								<?php receipts($conn); ?>
 								
 							</tbody>
 						</table>

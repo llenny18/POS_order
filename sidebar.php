@@ -63,7 +63,7 @@ $result = $conn->query($sql);
 if ($result->num_rows > 0) {
   // output data of each row
   while($row = $result->fetch_assoc()) {
-    echo '<tr>	<td>'.$row["itemID"].'</td><td scope="row">'.$row["itemStock"].'</td><td scope="row">'.$row["itemPrice"].'</td><td scope="row">'.$row["itemName"].'</td><td scope="row">'.$row["itemDescription"].'</td><td scope="row">'.$row["itemBrand"].'</td><td scope="row">'.$row["itemCategory"].'</td><td><a href="http://" style="background-color: darkblue; color: #ffffff; padding: 7px; border-radius: 5px;">Edit</a></td></tr>';
+    echo '<tr>	<td>'.$row["itemID"].'</td><td scope="row">'.$row["itemStock"].'</td><td scope="row">'.$row["itemPrice"].'</td><td scope="row">'.$row["itemName"].'</td><td scope="row">'.$row["itemDescription"].'</td><td scope="row">'.$row["itemBrand"].'</td><td scope="row">'.$row["itemCategory"].'</td><td><a href="editprod.php?item_id='.$row["itemID"].'" style="background-color: darkblue; color: #ffffff; padding: 7px; border-radius: 5px;">Edit</a></td></tr>';
   }
 } else {
   echo "0 results";
@@ -78,7 +78,7 @@ $result = $conn->query($sql);
 if ($result->num_rows > 0) {
   // output data of each row
   while($row = $result->fetch_assoc()) {
-    echo '<tr>	<td>'.$row["itemID"].'</td><td scope="row">'.$row["itemStock"].'</td><td scope="row">'.$row["itemPrice"].'</td><td scope="row">'.$row["itemName"].'</td><td scope="row">'.$row["itemDescription"].'</td><td scope="row">'.$row["itemBrand"].'</td><td scope="row">'.$row["itemCategory"].'</td><td><a href="http://" style="background-color: darkblue; color: #ffffff; padding: 7px; border-radius: 5px;">Edit</a></td></tr>';
+    echo '<tr>	<td>'.$row["itemID"].'</td><td scope="row">'.$row["itemStock"].'</td><td scope="row">'.$row["itemPrice"].'</td><td scope="row">'.$row["itemName"].'</td><td scope="row">'.$row["itemDescription"].'</td><td scope="row">'.$row["itemBrand"].'</td><td scope="row">'.$row["itemCategory"].'</td><td><a href="editprod.php?item_id='.$row["itemID"].'" style="background-color: darkblue; color: #ffffff; padding: 7px; border-radius: 5px;">Edit</a></td></tr>';
   }
 } else {
   echo "0 results";

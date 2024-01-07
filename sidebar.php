@@ -136,7 +136,7 @@ $result = $conn->query($sql);
 if ($result->num_rows > 0) {
   // output data of each row
   while($row = $result->fetch_assoc()) {
-    echo '<tr>	<td>'.$row["oID"].'</td><td scope="row">'.$row["totalPricer"].'</td><td scope="row">'.$row["orderDate"].'</td><td><a href="http://" style="background-color: darkblue; color: #ffffff; padding: 7px; border-radius: 5px;">View</a></td></tr>';
+    echo '<tr>	<td>'.$row["oID"].'</td><td scope="row">'.$row["totalPricer"].'</td><td scope="row">'.$row["orderDate"].'</td><td><a href="receiptrecs.php?rid='.$row["oID"].'" style="background-color: darkblue; color: #ffffff; padding: 7px; border-radius: 5px;">View</a></td></tr>';
   }
 } else {
   echo "0 results";
@@ -144,7 +144,41 @@ if ($result->num_rows > 0) {
 }
 
 
+function receiptid($conn, $rid){
+$sql = "SELECT * FROM `receipts` where oID = '$rid'";
+$result = $conn->query($sql);
 
+if ($result->num_rows > 0) {
+  // output data of each row
+  while($row = $result->fetch_assoc()) {
+    echo '<tr>	
+	<td>
+                           <span class="text-inverse">'.$row["itemName"].'</span><br>
+                           <small>'.$row["itemDescription"].'</small>
+                        </td>
+	<td class="text-center">'.$row["itemPrice"].'</td>
+	<td class="text-center">'.$row["oQuantity"].'</td>
+	<td class="text-right">'.$row["totalPrice"].'</td>
+	</tr>';
+  }
+} else {
+  echo "0 results";
+}
+}
+
+function receiptidsum($conn, $rid){
+$sql = "SELECT * FROM `receipt_sums` where oID = '$rid'";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+  // output data of each row
+  while($row = $result->fetch_assoc()) {
+    return $row["totalPricer"];
+  }
+} else {
+  echo "0 results";
+}
+}
 
 function deliveriesbyID($conn, $id){
 $sql = "SELECT * FROM `delivery_info` WHERE delivery_info.delivery_groupID = '$id'";
@@ -181,5 +215,22 @@ if ($result->num_rows > 0) {
   echo "0 results";
 }
 }
+
+
+
+function receiptiddate($conn, $rid){
+$sql = "SELECT * FROM `receipt_sums` where oID = '$rid'";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+  // output data of each row
+  while($row = $result->fetch_assoc()) {
+    return $row["orderDate"];
+  }
+} else {
+  echo "0 results";
+}
+}
+
 
 ?>

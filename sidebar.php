@@ -39,6 +39,14 @@
 							<li><a href="./receipt.php">Receipts</a></li>
 						</ul>
 					</li>
+					<li class="dropdown">
+						<a href="javascript:;" class="dropdown-toggle">
+							<span class="micon dw dw-apartment"></span><span class="mtext"> Delivery </span>
+						</a>
+						<ul class="submenu">
+							<li><a href="dreports.php">Reports</a></li>
+						</ul>
+					</li>
 					
 				</ul>
 			</div>
@@ -129,6 +137,45 @@ if ($result->num_rows > 0) {
   // output data of each row
   while($row = $result->fetch_assoc()) {
     echo '<tr>	<td>'.$row["oID"].'</td><td scope="row">'.$row["totalPricer"].'</td><td scope="row">'.$row["orderDate"].'</td><td><a href="http://" style="background-color: darkblue; color: #ffffff; padding: 7px; border-radius: 5px;">View</a></td></tr>';
+  }
+} else {
+  echo "0 results";
+}
+}
+
+
+
+
+function deliveriesbyID($conn, $id){
+$sql = "SELECT * FROM `delivery_info` WHERE delivery_info.delivery_groupID = '$id'";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+  // output data of each row
+  while($row = $result->fetch_assoc()) {
+    echo '<tr>	<td>'.$row["itemName"].'</td>
+	<td scope="row">PHP '.$row["itemPrice"].' x '.$row["itemCount"].'</td>
+	<td scope="row">'.$row["totalPrice"].'</td>
+	<td scope="row">'.$row["itemBrand"].'</td>
+	<td scope="row">'.$row["dCostumerName"].'</td>
+	<td scope="row">'.$row["dCostumerNumber"].'</td>
+	<td scope="row">'.$row["dPlace"].'</td>
+	<td scope="row">'.$row["dDate"].'</td>
+	<td scope="row">'.$row["dtName"].'</td>';
+  }
+} else {
+  echo "0 results";
+}
+}
+
+function dreports($conn){
+$sql = "SELECT * FROM `delivery_grouped`";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+  // output data of each row
+  while($row = $result->fetch_assoc()) {
+    echo '<tr>	<td>'.$row["delivery_groupID"].'</td><td scope="row">'.$row["dDate"].'</td><td scope="row">'.$row["dCostumerName"].'</td><td><a href="deliveries.php?did='.$row["delivery_groupID"].'" style="background-color: darkblue; color: #ffffff; padding: 7px; border-radius: 5px;">View</a></td></tr>';
   }
 } else {
   echo "0 results";

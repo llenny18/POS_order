@@ -326,9 +326,9 @@
          <!-- end invoice-content -->
          <!-- begin invoice-note -->
          <div class="invoice-note">
-            * Make all cheques payable to [Your Company Name]<br>
-            * Payment is due within 30 days<br>
-            * If you have any questions concerning this invoice, contact  [Name, Phone Number, Email]
+            * This receipt is auto generated<br>
+            * POS system auto generates the rceipt<br>
+            * This receipt is proof for costumers' purchases
          </div>
          <!-- end invoice-note -->
          <!-- begin invoice-footer -->
@@ -337,9 +337,9 @@
                THANK YOU FOR YOUR BUSINESS
             </p>
             <p class="text-center">
-               <span class="m-r-10"><i class="fa fa-fw fa-lg fa-globe"></i> matiasgallipoli.com</span>
-               <span class="m-r-10"><i class="fa fa-fw fa-lg fa-phone-volume"></i> T:016-18192302</span>
-               <span class="m-r-10"><i class="fa fa-fw fa-lg fa-envelope"></i> rtiemps@gmail.com</span>
+               <span class="m-r-10"><i class="fa fa-fw fa-lg fa-globe"></i> facebook.com</span>
+               <span class="m-r-10"><i class="fa fa-fw fa-lg fa-phone-volume"></i> 09876231233</span>
+               <span class="m-r-10"><i class="fa fa-fw fa-lg fa-envelope"></i> umandap@gmail.com</span>
             </p>
          </div>
          <!-- end invoice-footer -->

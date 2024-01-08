@@ -169,9 +169,13 @@
 					</div>
 
 				</div>
-				<div id="tableContainer" style="display: none; margin-top: -100px;position: fixed; /* Stay in place */ z-index: 1;height: 500px; /* Full height */ overflow: auto; /* Enable scroll if needed */; width: 78%; background-color: white; border-radius: 20px; padding: 30px;">
+				<div id="tableContainer" style="display: none; margin-top: -100px;position: fixed; /* Stay in place */ z-index: 1;height: 500px; /* Full height */ overflow: auto; /* Enable scroll if needed */; width: 78%; background-color: white; border-radius: 20px; padding: 30px;  border: 2px solid lightgray; box-shadow: 0 7px 10px rgba(0, 0, 0, 0.2);">
+				
+				<div class="right-align-button" style="text-align: right;">
+				<button id="exitButton"  class="btn btn-danger" onclick="hideTable()" >x</button></div><form action="" method="post">
 				<div class="table-responsive">
-						<table class="table table-striped" style="border-collapse: collapse; width: 100%; border: 2px solid lightgray; ">
+					
+						<table class="table table-striped" style="border-collapse: collapse; width: 100%;">
 						<thead>
 							<tr>
 								<th scope="col">Product ID</th>
@@ -182,15 +186,20 @@
 						</thead>
 						<tbody>
 							<tr>
-								<th scope="row">54634612</th>
-								<td>Gatorade</td>
-								<td>4</td>
-								<td>45.67</td>
+								<th scope="row"><input type="text" readonly name="" id="" value="54634612" style="background: transparent; border: none;"></th>
+								<td><input type="text" readonly name="" id="" value="Gatorade" style="background: transparent; border: none;"></td>
+								<td><input type="text" readonly name="" id="" value="4" style="background: transparent; border: none;"></td>
+								<td><input type="text" readonly name="" id="" value="45.67" style="background: transparent; border: none;"></td>
 							</tr>
 							
 						</tbody>
 					</table>
 				</div>
+				<hr>
+				<h3  class="text-right">Total Price = PHP <input type="text" readonly name="" id="" value="45.67" style="background: transparent; border: none;"></h3>
+				<hr>
+				<button  class="btn btn-primary dropdown-toggle" method="submit">Checkout</button>
+				</form>
 				</div>
 				<div class="row clearfix">
 					<?php pos_items($conn); ?>
@@ -208,6 +217,11 @@
 			var tableContainer = document.getElementById("tableContainer");
 			tableContainer.style.display = "block";
 		}
+		function hideTable() {
+			var tableContainer = document.getElementById("tableContainer");
+			tableContainer.style.display = "none";
+		}
+		
 	</script>
 	<script src="./vendors/scripts/core.js"></script>
 	<script src="./vendors/scripts/script.min.js"></script>

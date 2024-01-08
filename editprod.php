@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<!-- Basic Page Info -->
-	<meta charset="utf-8">
+	<?php include("./includes.php"); ?><meta charset="utf-8">
 	<title>DeskApp - Bootstrap Admin Dashboard HTML Template</title>
 
 	<!-- Site favicon -->
@@ -25,124 +26,170 @@
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-119386393-1"></script>
 	<script>
 		window.dataLayer = window.dataLayer || [];
-		function gtag(){dataLayer.push(arguments);}
+
+		function gtag() {
+			dataLayer.push(arguments);
+		}
 		gtag('js', new Date());
 
 		gtag('config', 'UA-119386393-1');
 	</script>
 </head>
+
 <body>
 	<?php include("./header.php"); ?>
 	<?php include("./sidebar.php");
-	
-	
+
+
 	if (isset($_GET['item_id'])) {
-    $item_id = $_GET['item_id'];
+		$item_id = $_GET['item_id'];
 
-    $sql = "SELECT * FROM item_view WHERE itemID = $item_id";
-    $result = $conn->query($sql);
+		$sql = "SELECT * FROM item_view WHERE itemID = $item_id";
+		$result = $conn->query($sql);
+	} else {
+		echo "Item ID not provided";
+	}
 
-    
-} else {
-    echo "Item ID not provided";
-}
+	if (isset($_POST['item_update'])) {
 
-	 ?>
+		if (isset($_POST['item_image'])) {
+			$file_name = $_FILES['item_image']['name'];
+			$file_tmp = $_FILES['item_image']['tmp_name'];
+
+			// Read the file content
+			$file_data = addslashes(file_get_contents($file_tmp));
+
+
+			$sql = "UPDATE `iteminfo` 
+		SET `itemName` = '{$_POST['item_name']}', 
+		`itemDescription` = '{$_POST['item_desc']}', 
+		`itemBrand` = '{$_POST['item_brand']}',
+		 `itemCategory` = '{$_POST['item_category']}' ,
+		 `itemImage` = '{$file_data}'
+		 WHERE `iteminfo`.`item_iID` = {$_POST['item_id']}";
+
+			// Execute the query
+			if ($conn->query($sql) === TRUE) {
+				echo "Record updated successfully";
+			} else {
+				echo "Error updating record: " . $conn->error;
+			}
+		}
+		else{
+			$sql = "UPDATE `iteminfo` 
+		SET `itemName` = '{$_POST['item_name']}', 
+		`itemDescription` = '{$_POST['item_desc']}', 
+		`itemBrand` = '{$_POST['item_brand']}',
+		 `itemCategory` = '{$_POST['item_category']}' 
+		 WHERE `iteminfo`.`item_iID` = {$_POST['item_id']}";
+
+			// Execute the query
+			if ($conn->query($sql) === TRUE) {
+				updateItemSuccess();
+			} else {
+				echo "Error updating record: " . $conn->error;
+			}
+
+		}
+	}
+	?>
 	<div class="mobile-menu-overlay"></div>
 
 	<div class="main-container">
 		<div class="pd-ltr-20 xs-pd-20-10">
 			<div class="min-height-200px">
-				
-				
+
+
 
 				<!-- Form grid Start -->
 				<?php // Step 3: Fetch the result and display the data
-    if ($result->num_rows > 0) {
-        while ($row = $result->fetch_assoc()) {
-            ?>
-				<div class="pd-20 card-box mb-30">
-					<div class="clearfix">
-						<div class="pull-left">
-							<h4 class="text-blue h4">Edit Item by ID</h4>
-							<p class="mb-30">All bootstrap element classies</p>
-						</div>
-					
-					</div>
-					<form>
-						<div class="row">
-							<div class="col-md-4 col-sm-12">
-								<div class="form-group">
-									<label>ID</label>
-									<input readonly value="<?= $row['itemID']; ?>" type="text" class="form-control">
-								</div>
-							</div>
-							<div class="col-md-4 col-sm-12">
-								<div class="form-group">
-									<label>Name</label>
-									<input type="text" value="<?= $row['itemName']; ?>"  class="form-control">
-								</div>
-							</div>
-							<div class="col-md-4 col-sm-12">
-								<div class="form-group">
-									<label>Stock</label>
-									<input type="text" value="<?= $row['itemStock']; ?>"  class="form-control">
-								</div>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-md-3 col-sm-12">
-								<div class="form-group">
-									<label>Price</label>
-									<input type="text" value="<?= $row['itemPrice']; ?>"  class="form-control">
-								</div>
-							</div>
-							<div class="col-md-3 col-sm-12">
-								<div class="form-group">
-									<label>Description</label>
-									<input type="text" value="<?= $row['itemDescription']; ?>"  class="form-control">
-								</div>
-							</div>
-							<div class="col-md-3 col-sm-12">
-								<div class="form-group">
-									<label>Brand</label>
-									<input type="text" value="<?= $row['itemBrand']; ?>"  class="form-control">
-								</div>
-							</div>
-							<div class="col-md-3 col-sm-12">
-								<div class="form-group">
-									<label>Category</label>
-									<input type="text" value="<?= $row['itemCategory']; ?>"  class="form-control">
-								</div>
-							</div>
-						</div>
-						
-					<hr>
-						<div class="row">
-							<div class="col-md-12 col-sm-12">
-								<div class="form-group">
-							
-								<label>Image</label>
-								<br>	
-								<img src="data:image/png;base64,<?= base64_encode($row["itemImage"]) ?>" alt="" style="height: 250px; padding: 10px; border: 1px solid lightgray; border-radius: 20px;">
-									<input type="file" class="form-control">
-								</div>
-							</div>
-						</div>
-						
-					</form>
-					
-				</div>
-				<!-- Form grid End -->
-<?php
+				if ($result->num_rows > 0) {
+					while ($row = $result->fetch_assoc()) {
+						?>
+								<div class="pd-20 card-box mb-30">
+									<div class="clearfix">
+										<div class="pull-left">
+											<h4 class="text-blue h4">Edit Item by ID</h4>
+											<p class="mb-30">All bootstrap element classies</p>
+										</div>
 
-        }
-    } else {
-        echo "No records found";
-    }
+									</div>
+									<form method="post">
+										<div class="row">
+											<div class="col-md-4 col-sm-12">
+												<div class="form-group">
+													<label>ID</label>
+													<input readonly name="item_id" value="<?= $row['itemID']; ?>" type="text" class="form-control">
+												</div>
+											</div>
+											<div class="col-md-4 col-sm-12">
+												<div class="form-group">
+													<label>Name</label>
+													<input type="text" name="item_name" value="<?= $row['itemName']; ?>" class="form-control">
+												</div>
+											</div>
+											<div class="col-md-4 col-sm-12">
+												<div class="form-group">
+													<label>Stock</label>
+													<input type="text" name="item_stock" value="<?= $row['itemStock']; ?>" class="form-control">
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-3 col-sm-12">
+												<div class="form-group">
+													<label>Price</label>
+													<input type="text" name="item_price" value="<?= $row['itemPrice']; ?>" class="form-control">
+												</div>
+											</div>
+											<div class="col-md-3 col-sm-12">
+												<div class="form-group">
+													<label>Description</label>
+													<input type="text" name="item_desc" value="<?= $row['itemDescription']; ?>" class="form-control">
+												</div>
+											</div>
+											<div class="col-md-3 col-sm-12">
+												<div class="form-group">
+													<label>Brand</label>
+													<input type="text" name="item_brand" value="<?= $row['itemBrand']; ?>" class="form-control">
+												</div>
+											</div>
+											<div class="col-md-3 col-sm-12">
+												<div class="form-group">
+													<label>Category</label>
+													<input type="text" name="item_category" value="<?= $row['itemCategory']; ?>" class="form-control">
+												</div>
+											</div>
+										</div>
+
+										<hr>
+										<div class="row">
+											<div class="col-md-12 col-sm-12">
+												<div class="form-group">
+
+													<label>Image</label>
+													<br>
+													<img src="data:image/png;base64,<?= base64_encode($row["itemImage"]) ?>" alt="" style="height: 250px; padding: 10px; border: 1px solid lightgray; border-radius: 20px;">
+													<input type="file" name="item_image" value="data:image/png;base64,<?= base64_encode($row["itemImage"]) ?>" class="form-control">
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<button type="submit" name="item_update" class="btn btn-primary ml-3">Upload</button>
+										</div>
+									</form>
+
+								</div>
+								<!-- Form grid End -->
+						<?php
+
+					}
+				} else {
+					echo "No records found";
+				}
 
 
-?>
+				?>
 
 			</div>
 			<?php include("./footer.php"); ?>
@@ -154,4 +201,5 @@
 	<script src="./vendors/scripts/process.js"></script>
 	<script src="./vendors/scripts/layout-settings.js"></script>
 </body>
+
 </html>

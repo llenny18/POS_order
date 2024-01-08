@@ -157,7 +157,7 @@
 				<!-- Export Datatable start -->
 				<div class="card-box mb-30">
 					<div class="pd-20">
-						<h4 class="text-blue h4">Stable Products Records</h4>
+						<h4 class="text-blue h4">Stable Products Records<a href="addprod.php" style="background-color: darkblue; color: #ffffff; padding: 7px; border-radius: 5px; margin-left: 10px;">+ Add Product</a></h4>
 					</div>
 					<div class="pb-20">
 						<table class="table hover multiple-select-row data-table-export nowrap">

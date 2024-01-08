@@ -1,30 +1,55 @@
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11">
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 
 
 <?php 
 function updateItemSuccess(){
     echo "<script>
 
-    function showConfirmation() {
+    
         Swal.fire({
-            title: 'Are you sure?',
-            text: 'You will be redirected to another page!',
+            title: 'Update Success',
+            text: 'You will be redirected to product list page!',
             icon: 'warning',
-            showCancelButton: true,
             confirmButtonColor: '#3085d6',
             cancelButtonColor: '#d33',
-            confirmButtonText: 'Yes, redirect me!'
+            confirmButtonText: 'Confirm!'
         }).then((result) => {
             if (result.isConfirmed) {
                 // Redirect to another page
-                window.location.href = 'product.php';
+                window.location.href = 'stableprod.php';
             }
         });
-    }
+    
    
 </script>
 ";
 }
+
+
+function addItemSuccess(){
+    echo "<script>
+
+    
+        Swal.fire({
+            title: 'Item Insertion Success',
+            text: 'You will be redirected to product list page!',
+            icon: 'warning',
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Confirm!'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                // Redirect to another page
+                window.location.href = 'stableprod.php';
+            }
+        });
+    
+   
+</script>
+";
+}
+
 
 ?>

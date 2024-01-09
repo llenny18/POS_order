@@ -138,19 +138,15 @@
 	
 		// Check if the query was successful
 		if ($result->num_rows > 0) {
-			
 			// Fetch each row and push values into the array
 			while ($row = $result->fetch_assoc()) {
-				
 				$_SESSION['data_pos_now'][] = $row;
 			}
 		}
 		
 		
 	}
-	if(isset($_SESSION['data_pos_now'])){
-		echo "<script>var jsArray = ".json_encode($_SESSION['data_pos_now'])."; console.log(jsArray);</script>";
-	}
+	
 	?>
 	<div class="mobile-menu-overlay"></div>
 

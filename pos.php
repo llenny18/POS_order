@@ -1,3 +1,4 @@
+<?php include("./session.php"); ?>
 <!DOCTYPE html>
 <html>
 
@@ -35,18 +36,7 @@
 </head>
 
 <body>
-	<div class="pre-loader">
-		<div class="pre-loader-box">
-			<div class="loader-logo"><img src="./vendors/images/deskapp-logo.svg" alt=""></div>
-			<div class='loader-progress' id="progress_div">
-				<div class='bar' id='bar1'></div>
-			</div>
-			<div class='percent' id='percent1'>0%</div>
-			<div class="loading-text">
-				Loading...
-			</div>
-		</div>
-	</div>
+	
 	<?php include("./header.php"); ?>
 
 	<div class="right-sidebar">
@@ -137,7 +127,26 @@
 			</div>
 		</div>
 	</div>
-	<?php include("./sidebar.php"); ?>
+	<?php include("./sidebar.php");
+	if (!isset($_SESSION['data'])) {
+		$_SESSION['data'] = array();
+	}
+	if(isset($_GET['pos_item'])){
+		$sql = "SELECT * FROM `item_view` WHERE itemID = '{$_GET['pos_item']}'";
+		$result = $conn->query($sql);
+		
+		// Check if the query was successful
+		if ($result->num_rows > 0) {
+			
+		
+			// Fetch each row and push values into the array
+			while ($row = $result->fetch_assoc()) {
+				$data_pos = $row;
+			}
+		}
+		$_SESSION['data'] = $data_pos; 
+	}
+	?>
 	<div class="mobile-menu-overlay"></div>
 
 	<div class="main-container">
@@ -191,14 +200,25 @@
 								<td><input type="text" readonly name="" id="" value="4" style="background: transparent; border: none;"></td>
 								<td><input type="text" readonly name="" id="" value="45.67" style="background: transparent; border: none;"></td>
 							</tr>
-							
+							<?php 
+							foreach($_SESSION['data'] as $tbl_items){
+								?>
+<tr>
+								<th scope="row"><input type="text" readonly name="" id="" value="<?= $tbl_items['itemID'] ?>" style="background: transparent; border: none;"></th>
+								<td><input type="text" readonly name="" id="" value="<?= $tbl_items['itemName'] ?>" style="background: transparent; border: none;"></td>
+								<td><input type="text" readonly name="" id="" value="1" style="background: transparent; border: none;"></td>
+								<td><input type="text" readonly name="" id="" value="<?= $tbl_items['itemPrice'] ?>" style="background: transparent; border: none;"></td>
+							</tr>
+
+								<?php }
+							?>
 						</tbody>
 					</table>
 				</div>
 				<hr>
 				<h3  class="text-right">Total Price = PHP <input type="text" readonly name="" id="" value="45.67" style="background: transparent; border: none;"></h3>
 				<hr>
-				<button  class="btn btn-primary dropdown-toggle" method="submit">Checkout</button>
+				<button  class="btn btn-primary" method="submit">Checkout</button>
 				</form>
 				</div>
 				<div class="row clearfix">

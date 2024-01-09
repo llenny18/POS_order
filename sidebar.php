@@ -99,16 +99,14 @@ $result = $conn->query($sql);
 if ($result->num_rows > 0) {
   // output data of each row
   while($row = $result->fetch_assoc()) {
-    echo '<div class="col-lg-3 col-md-6 col-sm-12 mb-30" style="cursor: pointer;">
+    echo '<a href="pos.php?pos_item='.$row["itemID"].'"><div class="col-lg-3 col-md-6 col-sm-12 mb-30" style="cursor: pointer;">
 						<div class="da-card">
 							<div class="da-card-photo">
 								<img src="data:image/png;base64,'.base64_encode($row["itemImage"]).'" alt="" style="height: 250px;display: block; margin-left: auto; margin-right: auto;">
 								<div class="da-overlay da-slide-left">
 									<div class="da-social">
 										<ul class="clearfix">
-											<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-											<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-											<li><a href="#"><i class="fa fa-envelope-o"></i></a></li>
+											<li><i class="fa fa-plus-square"></i></a></li>
 										</ul>
 									</div>
 								</div>
@@ -118,7 +116,7 @@ if ($result->num_rows > 0) {
 								<p class="mb-0">'.$row["itemPrice"].'</p>
 							</div>
 						</div>
-					</div>
+					</div></a>
 				';
 			}
 } else {

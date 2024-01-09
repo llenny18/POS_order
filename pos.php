@@ -1,4 +1,3 @@
-<?php include("./session.php"); ?>
 <!DOCTYPE html>
 <html>
 
@@ -127,24 +126,30 @@
 			</div>
 		</div>
 	</div>
-	<?php include("./sidebar.php");
-	if (!isset($_SESSION['data'])) {
-		$_SESSION['data'] = array();
+	<?php
+	
+	include("./sidebar.php");
+	if (!isset($_SESSION['data_pos_now'])) {
+		$_SESSION['data_pos_now']= array();
 	}
 	if(isset($_GET['pos_item'])){
 		$sql = "SELECT * FROM `item_view` WHERE itemID = '{$_GET['pos_item']}'";
 		$result = $conn->query($sql);
-		
+	
 		// Check if the query was successful
 		if ($result->num_rows > 0) {
 			
-		
 			// Fetch each row and push values into the array
 			while ($row = $result->fetch_assoc()) {
-				$data_pos = $row;
+				
+				$_SESSION['data_pos_now'][] = $row;
 			}
 		}
-		$_SESSION['data'] = $data_pos; 
+		
+		
+	}
+	if(isset($_SESSION['data_pos_now'])){
+		echo "<script>var jsArray = ".json_encode($_SESSION['data_pos_now'])."; console.log(jsArray);</script>";
 	}
 	?>
 	<div class="mobile-menu-overlay"></div>
@@ -201,15 +206,9 @@
 								<td><input type="text" readonly name="" id="" value="45.67" style="background: transparent; border: none;"></td>
 							</tr>
 							<?php 
-							foreach($_SESSION['data'] as $tbl_items){
+							foreach($_SESSION['data_pos_now'] as $tbl_items){
 								?>
-<tr>
-								<th scope="row"><input type="text" readonly name="" id="" value="<?= $tbl_items['itemID'] ?>" style="background: transparent; border: none;"></th>
-								<td><input type="text" readonly name="" id="" value="<?= $tbl_items['itemName'] ?>" style="background: transparent; border: none;"></td>
-								<td><input type="text" readonly name="" id="" value="1" style="background: transparent; border: none;"></td>
-								<td><input type="text" readonly name="" id="" value="<?= $tbl_items['itemPrice'] ?>" style="background: transparent; border: none;"></td>
-							</tr>
-
+<script>alert('<?= $tbl_items['itemID'] ?>')</script>
 								<?php }
 							?>
 						</tbody>
